@@ -25,14 +25,13 @@ export default function Modal({ closeModal, children }) {
       console.log(e.target);
     }
   };
-  return createPortal(
+  return (
     <div class={m.overlay} onClick={handleBackdropClick}>
       <div class="modal">
         {children}
         <img src="" alt="" />
       </div>
-    </div>,
-    modalRoot
+    </div>
   );
 }
 Modal.propTypes = {

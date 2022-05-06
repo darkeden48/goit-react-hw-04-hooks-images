@@ -52,7 +52,7 @@ export default function App() {
         }
         return;
       })
-      .catch((error) => setStatus("rejected"));
+      .catch((error) => setError(true));
   }, [input, page]);
 
   const handleSubmite = (input) => {
@@ -80,7 +80,9 @@ export default function App() {
         <ImageGallery onOpen={onOpenLargeImage} image={image} />
       )}
       {status === "pending" && <Loader />}
-      {status === "rejected" && <h1>Картинок по запросу {input} не найдено</h1>}
+      {status === "rejected" && (
+        <h1>Картинок по запросу '{input}' не найдено</h1>
+      )}
       {showLoadMoreBtn && <Button onClick={onLoadMoreClick} />}
       {showModal && (
         <Modal closeModal={modalToggle}>

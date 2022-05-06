@@ -7,14 +7,6 @@ export default function ImageGalleryItem({
   onSelect,
   largeImageURL,
 }) {
-  //  function choco (e) {
-  //     this.props.onClickElem(e);
-  // // console.log(e.target)
-  // }
-
-  // if (image.length===0) {
-  //   return <h1>Картинок по такому запросу не найдено</h1>;
-  // }
   return (
     <li>
       <img
