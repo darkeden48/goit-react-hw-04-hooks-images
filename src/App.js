@@ -25,7 +25,9 @@ export default function App() {
   }, [input]);
 
   useEffect(() => {
-    if (!input || input === " ") {
+    if (input.trim() === "") {
+      setShowLoadMoreBtn(false);
+      setStatus("idle");
       return;
     }
     setStatus("pending");
