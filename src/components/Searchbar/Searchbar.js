@@ -11,7 +11,7 @@ export default function Searchbar({ onSubmit }) {
   };
 
   const handleChange = (event) => {
-    setInput(event.currentTarget.value);
+    setInput(event.currentTarget.value.trim());
   };
 
   return (
